@@ -107,6 +107,45 @@ export default function Landing() {
         { image: '/images/people/14.png' },
        
     ];
+    
+    const timelineData = [
+         {
+        date: "24 NOV 2024",
+        title: "RAYMOND CHIN X FELIX SIAUW",
+        description: "Raymond yang dikenal kritis mempertanyakan agama Islam hingga belajar logika Islam langsung bersama Ustadz Felix."
+    },
+    {
+        date: "17 FEB 2025",
+        title: "ESCAPE",
+        description: "Bari keredahan dan pertengkaran audience yang dengan negarapra. sedikit nama ESCAPE sebagai nama untuk yang lebih teraksis."
+    },
+    {
+        date: "1 MARCH 2025",
+        title: "ESCAPE PODCAST RAMADHAN",
+        description: "ESCAPE hadir sebagai podcast Ramadan yang bertermasuk mengodili, keserluatan, pebealaren, dengan format unik bersama Raymond, Ustadz Felix, Koi, dan Yeven."
+    },
+    {
+        date: "4 MAY 2025",
+        title: "ESCAPE LIVE PODCAST MEDAN",
+        description: "Perjalanan ibu membawa ESCAPE ke Medan lewat live podcast bersama RUMAH TAHFIDZ."
+    },
+    {
+        date: "20 SEPT 2025",
+        title: "ESCAPE LIVE PODCAST BANDUNG",
+        description: "Setelah sukses di Medan, ESCAPE merealisakan live podcast di Bandung dengan tema CEO."
+    },
+    {
+        date: "23 NOV 2025",
+        title: "ESCAPE JAPAN: 少しずつ",
+        description: "Sesuai harapan Yeven, perjalanan berlanjut ke Jepang untuk mencarimakna little by little."
+    },
+    {
+        date: "29 NOV 2025",
+        title: "ESCAPE LIVE PODCAST JAKARTA",
+        description: "Menyatu seluruh ESCAPE merealisikan seluruh perjalanan dalam live podcast Jakarta bersama ADDINU."
+    },
+    ];
+
 
 
     return (
@@ -353,14 +392,8 @@ export default function Landing() {
             <InfiniteScroll imageSrc="/images/escape.png" />
 
             {/* Team Section */}
-            <section className="bg-black py-16 md:py-24">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    {/* Section Title */}
-                    <div className="mb-12 text-center md:mb-16">
-                        <h2 className="text-4xl font-bold text-white uppercase md:text-5xl lg:text-6xl">
-                            ESCAPE JOURNEY
-                        </h2>
-                    </div>
+            <section className="bg-black py-5 md:py-8">
+                <div className="mx-auto max-w-7xl px-0 lg:px-0">
 
                     {/* Team Grid - No gaps between cards */}
                     <div className="grid grid-cols-2 md:grid-cols-4">
@@ -383,7 +416,7 @@ export default function Landing() {
                                 
                                 {/* Blurred div that slides from bottom to top */}
                                 <div className="absolute inset-0 translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-[70%]">
-                                    <div className="h-full w-full backdrop-blur-md"></div>
+                                    <div className="rounded-t-2xl h-full w-full backdrop-blur-md"></div>
                                 </div>
 
                                 {/* Text overlay - always on top, not blurred */}
@@ -403,48 +436,88 @@ export default function Landing() {
                         ))}
                     </div>
 
-                    {/* Timeline Section */}
-                    <div className="mt-16 md:mt-24">
-                        <div className="relative">
-                            {/* Timeline container with proper width constraints */}
-                            <div className="flex flex-nowrap relative">
-                                {[...Array(5)].map((_, i) => {
-                                    const isEven = i % 2 === 0;
-                                    return (
-                                        <div key={i} className="relative flex-1 min-w-0">
-                                            {/* Grid container for timeline item */}
-                                            <div className="grid grid-cols-1 grid-rows-2 h-full">
-                                                {/* Empty space (top or bottom depending on even/odd) */}
-                                                <div className={`${!isEven && 'order-1'} min-h-[100px]`}></div>
-                                                
-                                                {/* Content box - constrained to not overflow */}
-                                                <div className='px-3 py-6 relative min-h-[200px]'>
-                                                    <div className="max-w-full overflow-hidden">
-                                                        <h3 className="mb-2 text-base font-bold text-white md:text-lg break-words">
-                                                            Lorem Ipsum
-                                                        </h3>
-                                                        <p className="text-xs leading-relaxed text-gray-300 md:text-sm break-words overflow-wrap-anywhere">
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ut!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            {/* Dot - centered on the timeline */}
-                                            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                                                <div className="size-6 rounded-full bg-red-500 border-2 border-white"></div>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
+                 {/* Timeline Section */}
+        <div className="my-24 text-center">
+            <h2 className="text-4xl mb-20 font-bold uppercase text-white md:text-5xl lg:text-6xl">
+                ESCAPE JOURNEY
+            </h2>
+        </div>
+<section className="relative mt-24 bg-black py-32 overflow-hidden">
+
+    {/* Container */}
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+        {/* Title */}
+
+        <div className="relative px-4 md:px-8">
+
+            {/* Timeline Line - Extended to full width */}
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 w-screen ml-[calc(-50vw+50%)]">
+                <div className="w-full border-t-2 border-dashed border-white/40"></div>
+            </div>
+
+            {/* Timeline Items */}
+            <div className="relative flex justify-between">
+
+                {timelineData.map((item, i) => {
+                    const isTop = i % 2 === 0; // 0, 2, 4, 6 on top; 1, 3, 5 on bottom
+
+                    return (
+                        <div key={i} className="relative flex-1 min-h-[260px] flex justify-center">
+
+                            {/* DOT */}
+                            <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+                                <div className="size-6 rounded-full border-2 border-white bg-red-500 shadow-lg"></div>
                             </div>
 
-                            {/* Dashed Line - positioned behind dots */}
-                            <div className='absolute left-0 right-0 top-1/2 -translate-y-1/2 z-0'>
-                                <div className='border-t-2 border-white border-dashed w-full'></div>
+                            {/* CONTENT */}
+                            <div
+                                className={`absolute left-1/2 -translate-x-1/2 px-4
+                                ${isTop
+                                        ? 'top-0 -translate-y-full pb-0 mt-16 text-left'
+                                        : 'bottom-0 translate-y-full pt-0 mb-16 text-left'
+                                    }`}
+                            >
+                                <div className="w-[200px] md:w-[240px] lg:w-[260px]">
+                                    <p className="mb-2 text-[11px] text-gray-400">
+                                        {item.date}
+                                    </p>
+
+                                    <h3 className="mb-3 text-sm font-bold uppercase leading-tight text-white md:text-base lg:text-xl">
+                                        {item.title}
+                                    </h3>
+
+                                    <p className="text-[10px] leading-relaxed font-light text-gray-300 md:text-xs">
+                                        {item.description}
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                    );
+                })}
+
+                {/* Final Item - 2026 */}
+                <div className="relative flex-1 min-h-[260px] flex justify-center">
+
+                    <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+                        <div className="size-6 rounded-full border-2 border-white bg-red-500 shadow-lg"></div>
                     </div>
+
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1 pt-0 text-left">
+                        <h3 className="text-xl md:text-2xl font-bold text-white">
+                            2026?
+                        </h3>
+                        <p className="text-xs md:text-xs font-bold text-white">
+                            STAY TUNED!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
                 </div>
             </section>
 
@@ -512,6 +585,238 @@ export default function Landing() {
                     </div>
                 </div>
             </section>
+
+
+      {/* Red Gradient Stripe with Icons */}
+    <div className="relative overflow-hidden bg-linear-to-r from-[#741E20] to-[#DA393C] py-2 md:py-2">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
+            {/* Left Icons */}
+            <div className="flex items-center gap-8 md:gap-12 lg:gap-16">
+                <div className="flex h-16 w-16 items-center justify-center md:h-20 md:w-20 lg:h-20 lg:w-20">
+                    <img src="/icons/Group.png" alt="" className="h-full w-full object-contain" />
+                </div>
+                <div className="hidden md:flex h-16 w-16 items-center justify-center md:h-20 md:w-20 lg:h-20 lg:w-20">
+                    <img src="/icons/20 26.png" alt="" className="h-full w-full object-contain" />
+                </div>
+                <div className="hidden lg:flex h-16 w-16 items-center justify-center md:h-20 md:w-20 lg:h-20 lg:w-20">
+                    <img src="/icons/Vector.png" alt="" className="h-full w-full object-contain" />
+                </div>
+            </div>
+
+            {/* Center Text */}
+            <div className="text-center">
+                <h2 className="text-base font-normal text-white md:text-lg lg:text-xl">
+                    <span className="font-bold">ESCAPE 2026:</span>
+                    <br />
+                    LATERAL THINKING
+                </h2>
+            </div>
+
+            {/* Right Icons */}
+            <div className="flex items-center gap-8 md:gap-12 lg:gap-16">
+                <div className="hidden lg:flex h-16 w-16 items-center justify-center md:h-20 md:w-20 lg:h-20 lg:w-20">
+                    <img src="/icons/Vector.png" alt="" className="h-full w-full object-contain" />
+                </div>
+                <div className="hidden md:flex h-16 w-16 items-center justify-center md:h-20 md:w-20 lg:h-20 lg:w-20">
+                    <img src="/icons/ESC.png" alt="" className="h-full w-full object-contain" />
+                </div>
+                <div className="flex h-16 w-16 items-center justify-center md:h-20 md:w-20 lg:h-20 lg:w-20">
+                    <img src="/icons/Group.png" alt="" className="h-full w-full object-contain" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {/* Past Event Section */}
+<section className="bg-black py-16 md:py-24">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Section Title */}
+        <div className="mb-12 text-center md:mb-16">
+            <h2 className="text-4xl font-bold text-white uppercase md:text-5xl lg:text-6xl">
+                Past Event
+            </h2>
+        </div>
+
+        {/* Event Cards Grid */}
+<div className="grid grid-cols-1 gap-1 md:grid-cols-3 md:gap-0">
+    {/* Medan Card */}
+    <div className="relative overflow-hidden rounded-3xl">
+        <div className="aspect-[4/3] overflow-hidden">
+            <img
+                src="/images/mdn.png"
+                alt="Medan Event"
+                className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="flex items-end justify-between">
+                <div>
+                    <p className="mb-1 text-[10px] font-medium uppercase tracking-wider text-gray-300 md:text-xs">
+                        Rumah Tangga
+                    </p>
+                    <h3 className="text-2xl font-bold uppercase text-white md:text-3xl lg:text-4xl">
+                        Medan
+                    </h3>
+                </div>
+                <div className="text-right">
+                    <span className="block text-xl font-bold text-white md:text-2xl">800+</span>
+                    <span className="text-[10px] uppercase text-gray-300 md:text-xs">Attendees</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {/* Bandung Card */}
+    <div className="relative overflow-hidden rounded-3xl">
+        <div className="aspect-[4/3] overflow-hidden">
+            <img
+                src="/images/bdg.png"
+                alt="Bandung Event"
+                className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="flex items-end justify-between">
+                <div>
+                    <p className="mb-1 text-[10px] font-medium uppercase tracking-wider text-gray-300 md:text-xs">
+                        Rumah Tangga
+                    </p>
+                    <h3 className="text-2xl font-bold uppercase text-white md:text-3xl lg:text-4xl">
+                        Bandung
+                    </h3>
+                </div>
+                <div className="text-right">
+                    <span className="block text-xl font-bold text-white md:text-2xl">1000+</span>
+                    <span className="text-[10px] uppercase text-gray-300 md:text-xs">Attendees</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {/* Jakarta Card */}
+    <div className="relative overflow-hidden rounded-3xl">
+        <div className="aspect-[4/3] overflow-hidden">
+            <img
+                src="/images/jkt.png"
+                alt="Jakarta Event"
+                className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="flex items-end justify-between">
+                <div>
+                    <p className="mb-1 text-[10px] font-medium uppercase tracking-wider text-gray-300 md:text-xs">
+                        Rumah Tangga
+                    </p>
+                    <h3 className="text-2xl font-bold uppercase text-white md:text-3xl lg:text-4xl">
+                        Jakarta
+                    </h3>
+                </div>
+                <div className="text-right">
+                    <span className="block text-xl font-bold text-white md:text-2xl">1200+</span>
+                    <span className="text-[10px] uppercase text-gray-300 md:text-xs">Attendees</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+       {/* Testimonial Section */}
+<div className="mt-16 md:mt-24 overflow-hidden">
+    <div className="flex flex-row-1 gap-0 lg:grid-cols-2 lg:gap-0">
+        {/* Left Column - Text Content */}
+        <div className="ml-8 flex flex-col justify-start basis-lg">
+           
+            
+            <h3 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+                What they say<br />about us!
+            </h3>
+            
+            <p className="text-sm leading-relaxed text-gray-300 md:text-base lg:text-sm">
+                Mayoritas audience menilai kekuatan ESCAPE ada pada chemistry yang solid, obrolan longkrongan yang natural namun tetap kritis dan berisi, interaksi serta quiz/games yang melibatkan penonton, serta ambience yang aman, fun, dan tidak menghakimi sehingga insight terasa dalam tapi tetap ringan dan menghibur.
+            </p>
+        </div>
+
+        {/* Right Column - Grid of 3 Images */}
+        <div className="ml-12 grid grid-cols-3 gap-0 items-start basis-3xl">
+            <div className='mt-4'>
+                <div className="">
+                
+                <div className='h-14 w-52 bg-[#2C2C2C] -translate-x-12 translate-y-56 rounded-sm text-xs'><p className='text-xs items-center px-2 py-1'>“Obrolannya kayak tongkrongan gituu, lucu sama spontan tapi tetep dalem dan bikin mikir.”</p></div>    
+                <img
+                    src="/images/rectangle1.png"
+                    alt="Testimonial 1"
+                    className="aspect-square h-full w-full object-cover"
+                />
+                </div>
+                <div className="mb-6">
+                <svg className="h-16 w-16 text-white md:h-20 md:w-20 -translate-y-62 -translate-x-10" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                </svg>
+            </div>
+            </div>
+            <div className="">
+                <div className='h-18 w-58 bg-[#2C2C2C] -translate-x-12 translate-y-8 rounded-sm text-xs'><p className='text-xs items-center px-2 py-1'>“segmen kaya ngobrol dipanggung sama sesi platinum tuh bikin berasa di dalem tongkrongan mereka bangetttt”</p></div>    
+                
+                <img
+                    src="/images/rectangle3.png"
+                    alt="Testimonial 2"
+                    className="aspect-square h-full w-full object-cover"
+                />
+            </div>
+            <div className="">
+                 <div className='h-14 w-52 bg-[#2C2C2C] -translate-x-12 translate-y-56 rounded-sm text-xs'><p className='text-xs items-center px-2 py-1'>“jujurr escape itu hidup banget gara-gara chemistry 4 orang itu, gacorrrr parahhh!”</p></div>    
+                <img
+                    src="/images/rectangle2.png"
+                    alt="Testimonial 3"
+                    className="aspect-square h-full w-full object-contain"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+
+{/* Collaboration CTA Section */}
+<section className="bg-[#050505] py-16 md:py-24">
+    <div className="mx-18 max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            {/* Left Column - Text Content */}
+            <div className="max-w-2xl">
+                <h2 className="mb-4 text-5xl font-bold text-white uppercase md:text-6xl lg:text-5xl leading-tight">
+                    Have an interesting<br />
+                    question about<br />
+                    <span className="text-[#DA393C]">Collaboration?</span>
+                </h2>
+                
+                <p className="mb-8 text-base text-gray-300 md:text-sm font-normal">
+                    Buat kalian yang mau kolaborasi bareng kita, langsung aja<br />
+                    kirim proposal kolaborasinya ke sini!
+                </p>
+                
+                <button className="bg-[#DA393C] hover:bg-[#bc3133] transition-colors duration-300 px-12 py-4 rounded-lg text-white font-bold text-base uppercase">
+                    Contact Us!
+                </button>
+            </div>
+
+            {/* Right Column - Phone Mockup */}
+            <div className="relative flex justify-center lg:justify-end">
+                <img src="images/KartuLuar.png" alt="" className="w-100" />
+            </div>
+        </div>
+    </div>
+</section>
+{/* Infinite Scroll Animation */}
+            <InfiniteScroll imageSrc="/images/escape.png" />
+    
+
             
 
             <style>{`
