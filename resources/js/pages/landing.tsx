@@ -815,6 +815,94 @@ export default function Landing() {
 </section>
 {/* Infinite Scroll Animation */}
             <InfiniteScroll imageSrc="/images/escape.png" />
+            {/* Footer Section */}
+<footer className="bg-black py-12 md:py-16">
+    <div className="mx-30 max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {/* Left Column - Logo and Description */}
+            <div className="space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center">
+                    <img src="/images/escape_logo.png" alt="Escape Logo" className="h-full w-full" />
+                </div>
+                <p className="text-xs leading-relaxed text-gray-400">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+            </div>
+
+            {/* Information Links */}
+            <div>
+                <h3 className="mb-4 text-base font-bold text-white">Information</h3>
+                <ul className="space-y-3">
+                    <li>
+                        <a href="#home" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#event" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            our works
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pricing" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            {/* Network Links */}
+            <div className="items-center">
+                <h3 className="mb-4 text-base font-bold text-white">Network</h3>
+                <ul className="space-y-3">
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            tiktok
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://shopee.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 transition-colors hover:text-white">
+                            Shopee
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            {/* Email Section */}
+            <div>
+                <h3 className="mb-4 text-xs font-bold text-white">Email escape:</h3>
+                <a href="mailto:escape@gmail.com" className="text-sm text-gray-400 transition-colors hover:text-white">
+                    escape@gmail.com
+                </a>
+                <p className="mt-4 text-xs leading-relaxed text-gray-400">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+            </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 border-t border-white pt-6 text-center">
+            <p className="text-xs text-gray-500">
+                Copyright © 2026 Escape. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
     
 
             
