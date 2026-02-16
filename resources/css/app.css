@@ -7,6 +7,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+    font-family: 'Sheepman';
+    src: url('/fonts/fonnts.com-Sheepman-Bold.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Space Grotesk Font Faces */
 @font-face {
     font-family: 'Space Grotesk';
@@ -45,6 +53,11 @@
         'Space Grotesk', ui-sans-serif, system-ui, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
+
+    --font-sheepman: 'Sheepman', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+        
 
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
