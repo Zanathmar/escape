@@ -187,3 +187,32 @@
         @apply bg-background text-foreground font-sans;
     }
 }
+
+.hero-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        118.96deg,
+        #fff 0%,
+        #777777 14%,
+        #FFF 58%,
+        #555555 80%
+    );
+
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    padding: 2px;
+    border-radius: inherit;
+
+}
