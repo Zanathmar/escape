@@ -7,24 +7,28 @@ export default function TalentsSection() {
             image: '/images/fs.png',
             gradientFrom: '#0B3D4C',
             gradientTo: '#198EB2',
+            instagram: 'https://www.instagram.com/felix.siauw',
         },
         {
             name: 'RAYMOND CHIN',
             image: '/images/rc.png',
             gradientFrom: '#852628',
             gradientTo: '#EB4447',
+            instagram: 'https://www.instagram.com/raymondchins',
         },
         {
             name: 'KOIYO CABE',
             image: '/images/kc.png',
             gradientFrom: '#0B3D4C',
             gradientTo: '#198EB2',
+            instagram: 'https://www.instagram.com/koiyocabe',
         },
         {
             name: 'VEREN ORNELA',
             image: '/images/vo.png',
             gradientFrom: '#852628',
             gradientTo: '#EB4447',
+            instagram: 'https://www.instagram.com/verren.ornela',
         },
     ];
     return(
@@ -33,9 +37,12 @@ export default function TalentsSection() {
                     {/* Team Grid - No gaps between cards */}
                     <div className="grid grid-cols-2 md:grid-cols-4">
                         {teamMembers.map((member, index) => (
-                            <div
+                            <a
                                 key={index}
                                 className="group relative overflow-hidden"
+                                href={member.instagram}
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 style={{
                                     background: `linear-gradient(to bottom, ${member.gradientFrom}, ${member.gradientTo})`,
                                 }}
@@ -56,7 +63,7 @@ export default function TalentsSection() {
 
                                 {/* Text overlay - always on top, not blurred */}
                                 <div className="absolute right-0 -bottom-3 left-0 z-10 lg:translate-y-full p-6 pb-8 transition-transform duration-500 ease-out group-hover:translate-y-0">
-                                    <h3 className="text-2xl leading-tight font-bold text-white uppercase md:text-4xl lg:text-4xl">
+                                    <h3 className="text-2xl leading-tight font-bold text-white uppercase md:text-3xl lg:text-4xl">
                                         {member.name
                                             .split(' ')
                                             .map((word, i) => (
@@ -70,7 +77,7 @@ export default function TalentsSection() {
                                             ))}
                                     </h3>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>

@@ -75,7 +75,7 @@ export default function Footer() {
                 <div className="hidden lg:flex lg:flex-row lg:gap-16 xl:gap-24">
 
                     {/* LEFT: Logo + desc + socials */}
-                    <div className="w-72 xl:w-80 flex-shrink-0 space-y-5">
+                    <div className="w-72 xl:w-80 shrink-0 space-y-5">
                         <div className="h-8 w-36">
                             <img src="/images/escape.png" alt="Escape Logo"
                                 className="h-full w-full object-contain object-left" />

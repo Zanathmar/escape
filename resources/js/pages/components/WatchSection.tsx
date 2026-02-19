@@ -49,22 +49,21 @@ export default function WatchSection() {
                     </div>
 
                     {/* Video Section */}
-                    <div className="mt-12 md:mt-16">
-                        {/* Video Container - maintaining aspect ratio */}
-                        <div className="relative mx-auto max-w-4xl">
-                            <div className="relative aspect-video overflow-hidden rounded-2xl bg-gray-900">
-                                {/* YouTube Embed */}
-                                <iframe
-                                    className="h-full w-full"
-                                    src="https://www.youtube.com/embed/uNzwo8l4P40?si=0MqMnA777mraRSrX"
-                                    title="YouTube video player"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy="strict-origin-when-cross-origin"
-                                    allowFullScreen
-                                />
-                            </div>
+                     {/* Video Section */}
+                <div className="mt-12 md:mt-16">
+                    <div className="relative mx-auto max-w-4xl">
+                        <div className="relative aspect-video overflow-hidden rounded-2xl bg-gray-900">
+                            <iframe
+                                className="absolute inset-0 h-full w-full"
+                                src="https://www.youtube.com/embed/uNzwo8l4P40?si=0MqMnA777mraRSrX"
+                                title="YouTube video player"
+                                style={{ border: 0 }}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            />
                         </div>
+                    </div>
 
                         {/* Description Text */}
                         <div className="mx-auto mt-8 max-w-3xl text-center">
@@ -79,6 +78,8 @@ export default function WatchSection() {
                             <a
                                 href="https://youtube.com/playlist?list=PLSNt1tjjz_ArTDv1jVMjhHlaHM51euDq0&si=OqVnRwGtmnPrz-S5"
                                 className="inline-block rounded-lg bg-[#DA393C] px-8 py-3.5 text-base font-semibold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#b52b2d] hover:shadow-2xl active:scale-95 md:px-10 md:py-4"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Watch Escape
                             </a>

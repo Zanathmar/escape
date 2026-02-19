@@ -47,10 +47,10 @@ export default function TimelineSection() {
     ];
 
     return (
-        <section className="relative mt-8 min-h-screen overflow-hidden bg-black py-16">
+        <section className="relative mt-8 min-h-3/4 overflow-hidden bg-black py-16">
             {/* Heading */}
             <div className="my-12 text-center md:my-24">
-                <h2 className="mb mb-8 text-4xl font-bold text-white uppercase md:mb-20 md:text-5xl lg:text-6xl">
+                <h2 className=" text-4xl font-bold text-white uppercase md:mb-0 md:text-5xl lg:text-6xl">
                     ESCAPE JOURNEY
                 </h2>
             </div>
@@ -85,7 +85,7 @@ export default function TimelineSection() {
                                 </div>
 
                                 {/* Dot */}
-                                <div className="relative z-10 flex w-10 flex-shrink-0 justify-center">
+                                <div className="relative z-10 flex w-10 shrink-0 justify-center">
                                     <div className="mt-1 size-5 rounded-full border-2 border-white bg-red-500 shadow-lg" />
                                 </div>
 
@@ -113,7 +113,7 @@ export default function TimelineSection() {
                         <div className="invisible w-[calc(50%-20px)] pr-4" />
 
                         {/* Dot */}
-                        <div className="relative z-10 flex w-10 flex-shrink-0 justify-center">
+                        <div className="relative z-10 flex w-10 shrink-0 justify-center">
                             <div className="mt-1 size-5 rounded-full border-2 border-white bg-red-500 shadow-lg" />
                         </div>
 
@@ -168,10 +168,10 @@ export default function TimelineSection() {
                                             <p className="mb-2 text-[11px] text-gray-400">
                                                 {item.date}
                                             </p>
-                                            <h3 className="mb-3 text-sm leading-tight font-bold text-white uppercase md:text-base lg:text-xl">
+                                            <h3 className="mb-3 text-sm leading-tight font-bold text-white uppercase md:text-base lg:text-lg">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-[10px] leading-relaxed font-light text-gray-300 md:text-xs lg:text-sm">
+                                            <p className="text-[10px] leading-relaxed font-light text-gray-300 md:text-[10px] lg:text-[10px]">
                                                 {item.description}
                                             </p>
                                         </div>

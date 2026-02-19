@@ -118,10 +118,10 @@ export default function Header() {
             <header className="sticky p-2 top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/5">
 
                 {/* ── Navbar ── */}
-                <nav className="mx-auto flex h-[68px] max-w-7xl items-center justify-between px-6 lg:px-10">
+                <nav className="mx-auto flex h-17 max-w-7xl items-center justify-between px-6 lg:px-10">
 
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center">
+                    <div className="shrink-0 flex h-10 w-10 items-center justify-center">
                         <img src="/images/escape_logo.png" alt="Logo" className="h-full w-full object-contain" />
                     </div>
 
@@ -133,7 +133,7 @@ export default function Header() {
                     </div>
 
                     {/* Desktop CTA */}
-                    <div className="hidden md:block flex-shrink-0">
+                    <div className="hidden md:block shrink-0">
                         <a href="#contact" className="text-sm font-bold text-white tracking-wide transition-opacity hover:opacity-60" style={{ letterSpacing: '0.02em' }}>
                             Contact Us
                         </a>
