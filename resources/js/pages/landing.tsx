@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import Hero from './components/HeroSection';
-import WatchSection from './components/WatchSection';
-import TalentsSection from './components/TalentsSection';
-import CollabSection from './components/CollabSection';
-import RedStripe from '@/components/RedStripe';
-import PastEventSection from './components/PastEventSection';
-import ContactSection from './components/ContactSection';
 import InfiniteScroll from '@/components/InfiniteScroll';
+import RedStripe from '@/components/RedStripe';
+import CollabSection from './components/CollabSection';
+import ContactSection from './components/ContactSection';
+import Hero from './components/HeroSection';
+import PastEventSection from './components/PastEventSection';
+import TalentsSection from './components/TalentsSection';
 import TimelineSection from './components/TimelineSection';
+import WatchSection from './components/WatchSection';
 
 // Reusable Infinite Scroll Component
 
